@@ -11,6 +11,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "ModuleAndPlugin.h"
+#include "MySpartaLog/TestActor.h"
 
 AModuleAndPluginCharacter::AModuleAndPluginCharacter()
 {
@@ -130,4 +131,11 @@ void AModuleAndPluginCharacter::DoJumpEnd()
 {
 	// signal the character to stop jumping
 	StopJumping();
+}
+
+void AModuleAndPluginCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+	
+	GetWorld()->SpawnActor(ATestActor::StaticClass());
 }
