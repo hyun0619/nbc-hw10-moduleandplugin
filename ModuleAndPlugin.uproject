@@ -5,22 +5,13 @@
 	"Description": "",
 	"Modules": [
 		{
-			"Name": "MySpartaLog",
-			"Type": "Runtime",
-			"LoadingPhase": "PreDefault",
-			"AdditionalDependencies": [
-				"Engine"
-			]
-		},
-		{
 			"Name": "ModuleAndPlugin",
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
 				"Engine",
 				"AIModule",
-				"UMG",
-				"MySpartaLog"
+				"UMG"
 			]
 		}
 	],
@@ -38,6 +29,10 @@
 		},
 		{
 			"Name": "GameplayStateTree",
+			"Enabled": true
+		},
+		{
+			"Name": "MyNBCLog",
 			"Enabled": true
 		}
 	]
